@@ -17,12 +17,12 @@ public class Movimiento : MonoBehaviour
     {
         if (Input.GetAxis("Horizontal")!=0)
         {
-            transform.Translate(transform.right * movSpeed * Time.deltaTime);
+            transform.Translate(transform.right * Input.GetAxis("Horizontal")* movSpeed * Time.deltaTime);
         }
 
         if (Input.GetAxis("Vertical") != 0)
         {
-            transform.Translate(transform.forward * movSpeed * Time.deltaTime);
+            transform.Translate(transform.forward * Input.GetAxis("Vertical") * movSpeed * Time.deltaTime);
         }
     }
 }
